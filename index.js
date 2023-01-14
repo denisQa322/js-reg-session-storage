@@ -8,10 +8,20 @@ const body = document.querySelector('body');
 const checkForReg = sessionStorage.getItem('user.data');
 
 if (checkForReg){
-    alert('You have already registrated.');
-    alert('Logging in.');
-    alert('You have logged in.');
-    registrationWrapper.style.display = 'none';
+    if(inputName.value === ''){
+        registrationWrapper.style.display = 'block';
+    }
+    if(inputCity.value === ''){
+        registrationWrapper.style.display = 'block';
+    }
+    if(inputPass.value === ''){
+        registrationWrapper.style.display = 'block';
+    }else{
+        alert('You have already registrated.');
+        alert('Logging in.');
+        alert('You have logged in.');
+        registrationWrapper.style.display = 'none';
+    }
 }
 
 registrationButton.addEventListener('click', () => {
@@ -22,8 +32,6 @@ registrationButton.addEventListener('click', () => {
     }
     if(inputName.value === ''){
         alert('You must type your name') 
-    }else{
-        stop;
     }
     if(inputCity.value === ''){
         alert('You must type your city');
