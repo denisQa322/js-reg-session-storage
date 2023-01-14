@@ -10,7 +10,7 @@ const checkForReg = sessionStorage.getItem('user.data');
 if (checkForReg){
     alert('You have already registrated.');
     alert('Logging in.');
-    alert('You have logged in.')
+    alert('You have logged in.');
     registrationWrapper.style.display = 'none';
 }
 
@@ -20,6 +20,16 @@ registrationButton.addEventListener('click', () => {
         city: inputCity.value,
         password: inputPass.value
     }
-
+    if(inputName.value === ''){
+        alert('You must type your name') 
+    }else{
+        stop;
+    }
+    if(inputCity.value === ''){
+        alert('You must type your city');
+    }
+    if(inputPass.value === ''){
+        alert('You must set the password');
+    }
     sessionStorage.setItem('user.data', JSON.stringify(data));
 });
