@@ -8,8 +8,9 @@ const body = document.querySelector('body');
 const checkForReg = sessionStorage.getItem('user.data');
 
 if (checkForReg){
-    alert('You have already registrated');
-    alert('Logging in');
+    alert('You have already registrated.');
+    alert('Logging in.');
+    alert('You have logged in.')
     registrationWrapper.style.display = 'none';
 }
 
