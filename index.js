@@ -44,4 +44,5 @@ registrationButton.addEventListener('click', () => {
 
 cleanButton.addEventListener('click', () =>{
     sessionStorage.clear();
+    location.reload(true);
 })
