@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:lightsteelblue;
+    font-family: sans-serif;
+}
+.registration-wrapper{
+    background: lightblue;
+    padding: 10px;
+    width: 500px;
+    margin: auto;
+    margin-top: 300px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 5px;
+    .registration-wrapper-bottom{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        input{
+            margin: 10px;
+            width: 300px;
+        }
+        button{
+            background-color:aquamarine ;
+            margin-top: 20px;
+            padding: 5px;
+            width: 300px;
+            &:active{
+                box-shadow: 10px 10px 10px gold;
+            }
+        }
+    }
+}
