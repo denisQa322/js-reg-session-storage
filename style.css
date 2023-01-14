@@ -36,4 +36,12 @@ body {
 }
 .registration-wrapper .registration-wrapper-bottom button:active {
   box-shadow: 10px 10px 10px gold;
+}
+
+.clean {
+  position: absolute;
+  bottom: 100px;
+  right: 100px;
+  background-color: red;
+  color: white;
 }/*# sourceMappingURL=style.css.map */

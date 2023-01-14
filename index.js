@@ -3,18 +3,18 @@ const inputName = document.querySelector('.name');
 const inputCity = document.querySelector('.city');
 const inputPass = document.querySelector('.password');
 const registrationWrapper = document.getElementById('registration-wrapper');
-const body = document.querySelector('body');
+const cleanButton = document.querySelector('.clean');
 
 const checkForReg = sessionStorage.getItem('user.data');
 
 if (checkForReg){
-    if(inputName.value === ''){
+    if(inputName.getItem === ''){
         registrationWrapper.style.display = 'block';
     }
-    if(inputCity.value === ''){
+    if(inputCity.getItem === ''){
         registrationWrapper.style.display = 'block';
     }
-    if(inputPass.value === ''){
+    if(inputPass.getItem === ''){
         registrationWrapper.style.display = 'block';
     }else{
         alert('You have already registrated.');
@@ -41,3 +41,7 @@ registrationButton.addEventListener('click', () => {
     }
     sessionStorage.setItem('user.data', JSON.stringify(data));
 });
+
+cleanButton.addEventListener('click', () =>{
+    sessionStorage.clear();
+})
